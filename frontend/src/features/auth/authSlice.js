@@ -12,8 +12,9 @@ const initialState = {
 };
 
 // Register user
+// Async thunk function
 export const register = createAsyncThunk(
-  "auth/register",
+  "auth/register", // action
   async (user, thunkAPI) => {
     try {
       return await authService.register(user);
@@ -51,6 +52,7 @@ export const authSlice = createSlice({
   name: "auth", // name of the slice
   initialState,
   reducers: {
+    // these are not asynchronous
     reset: (state) => {
       state.isLoading = false;
       state.isError = false;

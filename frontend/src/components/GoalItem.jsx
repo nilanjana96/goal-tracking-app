@@ -8,10 +8,10 @@ const GoalItem = ({goal}) => {
    <>
     <div className="goal">
         <div>
-            {new Date(goal.creatdAt).toLocaleString('en-US')}
+            {new Date(goal.createdAt).toLocaleString('en-US')}
         </div>
         <h2>{goal.text}</h2>
-        <button className="close" onClick={()=>dispatch(deleteGoal(goal._id))}></button>
+        <button className="close" onClick={()=>dispatch(deleteGoal(goal._id))}>X</button>
     </div>
    </>
   )

@@ -2,12 +2,14 @@ import React from 'react'
 import {useState, useEffect} from 'react'
 import {FaUser} from 'react-icons/fa'
 import {useSelector, useDispatch} from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom' // used for re-direction
 import {toast} from 'react-toastify'
 import {register, reset} from '../features/auth/authSlice'
 import Spinner from '../components/Spinner'
 
-// useSelector is used to select something from the state
+// useSelector is used to select something (e.g: user, isLoading, isError etc.) from the state 
+// useDispatch - if we want to dispatch functions like asyncThunk function 'register' or reducer function 'reset'
+// we use useDispatch
 
 const Register = () => {
     const [formData, setFormData] = useState({

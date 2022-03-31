@@ -26,6 +26,7 @@ const Dashboard = () => {
         }
         dispatch(getGoals())
 
+        // when you leave the dashboard/unmounting of a component, goals need to be reset
         return () => {
             dispatch(reset())
         }
